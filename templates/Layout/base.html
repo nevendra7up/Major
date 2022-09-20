@@ -16,36 +16,27 @@
 
 </head>
 
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg p-3 navbar-dark bg-primary">
-          <div class="container">
-            <a class="navbar-brand" href="/">Flasky</a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/" aria-current="page">Home <span class="visually-hidden">(current)</span></a>
-                    </li>
-                    
-              
-                </ul>
-                
-                <ul class="navbar-nav mt-2 mt-lg-0">  
-                  <li class="nav-item">
-                    <a href="/login" class="nav-link">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="/register" class="btn btn-outline-dark">Sign Up</a>
-                  </li>
-                </ul>
-            </div>
+<body>                      
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
+          
+        </ul>
+
+        
+
+        <div class="text-end">
+          <a role="button" class="btn btn-outline-light me-2" href="/login">Login</a>
+          <a role="button" class="btn btn-warning" href="/register">Sign-up</a>
+        </div>
       </div>
-    </nav>
-    
+    </div>
   </header>
   
   <main>
