@@ -1,7 +1,54 @@
 {% extends 'layout/base.html' %}   <!-- fextend -->
 
 {% block body %}     <!-- fblock-->
+<div class="container"> <!---.container>.row>.col-->
+    <div class="row form-row">
+        <div class="col-lg-4">
+            <h1 class="my-5">Register An Account</h1>
+            <form class="shadow-lg p-3 rounded bg-light">
+                <div class="mb-3">
+                  <label for="email1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email">
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="email" class="form-control" id="username" name="username">
+                  </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" name="password">
+                  <div class="form-text text-warning" id="passHelp">Password should be min 6 character</div>
+                </div>
 
+                <div class="mb-3">
+                    <label for="confirmPass" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPass" name="confirmpass">
+                  </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
+{% block css %}
+<style>
+    .form-row{
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        background-image: url('https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+
+</style>
+
+{% endblock %}
 
