@@ -1,0 +1,28 @@
+{% extends 'layout/base.html' %}
+
+{% block body %}
+<h1>Welcome to Index</h1>
+<p>This is a sample home page</p>
+{% endblock %}
+
+{% block css %}
+<style>
+  main{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    background-color: coral;
+    background-image: url('https://images.pexels.com/photos/3680131/pexels-photo-3680131.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+</style>
+{% endblock %}
+
+
+
