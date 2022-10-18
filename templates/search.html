@@ -1,0 +1,49 @@
+{% extends 'layout/base.html' %}   <!-- fextend -->
+{% block body %}
+<div class="container-fluid">
+  <div class="row vh-100">
+    <div class="col-lg-3 bg-light ">
+      <!-- form code -->
+      <h2>SEARCH</h2>
+      <form class="p-3 rounded" method="POST">
+        <div class="mb-3">
+          <label for="stock" class="form-label">STOCK NAME</label>
+          <input type="text" class="form-control" id="stock" name="stockname" list="stocks" >
+          <datalist id="stocks">
+            <option selected>Select a Stock</option>
+            {% for stock in stocks %}
+            <option value="{{stock[0]}}">{{stock[1]}}</option>
+            {% endfor %} 
+          </datalist>
+        </div>
+        <div class="mb-3">
+          <label for="duration" class="form-label">DURATION</label>
+          <select class="form-select" aria-label="size 3 select example" name="duration" id="duration">
+            <option selected>Select</option>
+            <option value="1">INTRADAY</option>
+            <option value="2">WEEK</option>
+            <option value="3">MONTHLY</option>
+          </select>
+        </div>
+          <div class="mb-3">
+          <label for="duration" class="form-label">INTERVAL</label>
+          <select class="form-select" aria-label="size 3 select example" name="interval" id="interval">
+            <option selected>Select</option> 
+            <option value="5min">5min</option>
+            <option value="10min">10min</option>
+            <option value="'15min">15min</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <div class="d-grid gap-2">
+            <button name="btnsubmit" id="btnsubmit" class="btn btn-success">Get Report</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-9">
+      <!-- analysis output -->
+    </div>
+  </div>
+</div>
+{% endblock %}
